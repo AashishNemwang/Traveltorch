@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelTorch.Book</title>
+<link rel="stylesheet" href="booking.css">
+<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  
+  <div class="head">
+    <h1>Pokhara</h1>
+  </div>
+
+
+  <section class="trip-container">
+    <div class="trip">
+      <img src="images/pokhara3.jpg" alt="Adventure Trekking">
+      <h2>Adventure</h2>
+      
+      <button type="button" class="book-button">Book</button>
+  </div>
+  
+  <div class="trip">
+      <img src="images/pokhara13.jpg" alt="Cultural Tour">
+      <h2>Cultural Tour</h2>
+  
+      <button type="button" class="book-button">Book</button>
+  </div>
+  
+  <div class="trip">
+      <img src="images/history.jpg" alt="Historical Tour">
+      <h2>Historical Tour</h2>
+  
+      <button type="button" class="book-button">Book</button>
+  </div>
+  
+  <div class="trip">
+      <img src="images/trek.jpg" alt="Road Trip">
+      <h2>Road Trip</h2>
+      
+      <button type="button" class="book-button">Book</button>
+  </div>
+  
+  </section>
+
+ <!-- Pop-up form -->
+<div id="popupForm" class="popup-form">
+  <h2>Booking Form</h2>
+  <form id="bookingForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required><br>
+    <label for="guests">Number of Guests:</label><br>
+    <input type="number" id="guests" name="guests" min="1" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+  <!-- Overlay to cover the background when pop-up is open -->
+  <div id="overlay" class="overlay"></div>
+
+  <script src="booking.js"></script>
+  
+</body>
+</html>
+

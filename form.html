@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Pop-up Form</title>
+<style>
+  /* Styles for the pop-up form */
+  .popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+  /* Styles for the overlay */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+</style>
+</head>
+<body>
+
+<!-- Button to trigger the pop-up form -->
+<button id="openPopupBtn">Book Now</button>
+
+<!-- Pop-up form -->
+<div id="popupForm" class="popup-form">
+  <h2>Booking Form</h2>
+  <form>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!-- Overlay to cover the background when pop-up is open -->
+<div id="overlay" class="overlay"></div>
+
+<script>
+  // Function to open the pop-up form
+  function openPopupForm() {
+    document.getElementById("popupForm").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  // Function to close the pop-up form
+  function closePopupForm() {
+    document.getElementById("popupForm").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  // Event listener for the button click to open the pop-up form
+  document.getElementById("openPopupBtn").addEventListener("click", openPopupForm);
+
+  // Event listener for the overlay click to close the pop-up form
+  document.getElementById("overlay").addEventListener("click", closePopupForm);
+</script>
+
+</body>
+</html>
